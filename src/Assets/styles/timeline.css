@@ -24,7 +24,11 @@ h1 {
     width: 100%;
 }
 
-.timeline-container {
+.timeline-year-title {
+    font-size: 32px;
+}
+
+.timeline-year-items-container {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -32,7 +36,7 @@ h1 {
 }
 
 /* middle axis */
-.timeline-container::after {
+.timeline-year-items-container::after {
     background-color: #e17b77;
     content: '';
     position: absolute;

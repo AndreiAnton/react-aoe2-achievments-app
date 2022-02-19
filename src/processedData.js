@@ -32,5 +32,27 @@ groupedItemsArray.forEach(group => {
     group.items.sort(orderAscending);
 });
 
+const groupedByYearItems = groupedItemsArray.reduce((groups, item) => {
+    const year = item.date.split(',')[1] ? item.date.split(',')[1]?.trim() : 'incomplete';
+    if (!groups[year]){
+        groups[year] = [];
+    }
+    groups[year].push(item);
+    return groups;
+}, {});
+
+const groupedByYearItemsArray = Object.keys(groupedByYearItems).map((year) => {
+    const timestamp = year !== 'incomplete' ? Date.parse(year) : 2000000000000
+    return {
+        year,
+        timestamp: timestamp,
+        items: groupedByYearItems[year]
+    };
+});
+
+// console.log(groupedByYearItemsArray)
 // console.log(groupedItemsArray)
-export default groupedItemsArray;
+
+export {
+    groupedByYearItemsArray
+};

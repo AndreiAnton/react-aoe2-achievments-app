@@ -10,7 +10,6 @@ const TimelineItem = ({ itemData }) => (
             {/* <time>{data.datePretty}</time> */}
             {/* <p>{data.title}</p> */}
             <img src={ACHIEVMENTS?.[itemData.img]} alt="" />
-            {/* <span className="circle"></span> */}
         </div>
     </div>
 );
