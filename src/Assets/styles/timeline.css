@@ -41,7 +41,7 @@ h1 {
     height: 100%;
 }
 
-.timeline-item {
+.timeline-item-group {
     display: flex;
     justify-content: flex-end;
     padding-right: 30px;
@@ -50,14 +50,14 @@ h1 {
     width: 50%;
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item-group:nth-child(odd) {
     align-self: flex-end;
     justify-content: flex-start;
     padding-left: 30px;
     padding-right: 0;
 }
 
-.timeline-item-content {
+.timeline-item-group-content {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     background-color: #fff;
@@ -71,7 +71,7 @@ h1 {
     text-align: right;
 }
 
-.timeline-item-content::after {
+.timeline-item-group-content::after {
     content: ' ';
     background-color: #fff;
     box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
@@ -83,31 +83,31 @@ h1 {
     height: 15px;
 }
 
-.timeline-item:nth-child(odd) .timeline-item-content {
+.timeline-item-group:nth-child(odd) .timeline-item-group-content {
     text-align: left;
     align-items: flex-start;
 }
 
-.timeline-item:nth-child(odd) .timeline-item-content::after {
+.timeline-item-group:nth-child(odd) .timeline-item-group-content::after {
     right: auto;
     left: -7.5px;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.timeline-item-content time {
+.timeline-item-group-content time {
     color: #777;
     font-size: 12px;
     font-weight: bold;
 }
 
-.timeline-item-content p {
+.timeline-item-group-content p {
     font-size: 16px;
     line-height: 24px;
     margin: 15px 0;
     max-width: 250px;
 }
 
-.timeline-item-content .circle {
+.timeline-item-group-content .circle {
     background-color: #fff;
     border: 3px solid #e17b77;
     border-radius: 50%;
@@ -119,7 +119,21 @@ h1 {
     z-index: 100;
 }
 
-.timeline-item:nth-child(odd) .timeline-item-content .circle {
+.timeline-item-group:nth-child(odd) .timeline-item-group-content .circle {
     right: auto;
     left: -40px;
+}
+
+.timeline-item {
+    color: black;
+}
+
+.timeline-item-content {
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+.timeline-item-group:nth-child(odd) .timeline-item-content {
+    flex-direction: row-reverse;
 }
