@@ -4,7 +4,8 @@ import WeekDay from "./WeekDay"
 import Cell from "./Cell"
 
 const Timeline = ({ range, data, colorFunc}) => {
-    let days = Math.abs(range[0].diff(range[1], 'days'))
+    // to obtain correct number of year days, add 1
+    let days = Math.abs(range[0].diff(range[1], 'days')) + 1
     let cells = Array.from(new Array(days))
     let weekDays = Array.from(new Array(7))
     let months = Array.from(new Array(Math.floor(days / 7)))

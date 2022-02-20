@@ -5,7 +5,7 @@ const Cell = ({ color }) => {
     }
     
     return (
-        <div className='timeline-cells-cell' style={style}>    
+        <div className='timeline-cells-cell' style={style}>
         </div>
     )
 }

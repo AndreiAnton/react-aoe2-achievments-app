@@ -50,9 +50,6 @@ const groupedByYearItemsArray = Object.keys(groupedByYearItems).map((year) => {
     };
 });
 
-// console.log(groupedByYearItemsArray)
-// console.log(groupedItemsArray)
-
 export {
     groupedByYearItemsArray
 };

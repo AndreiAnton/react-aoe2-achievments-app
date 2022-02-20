@@ -64,7 +64,7 @@ html, body {
   display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 112px;
+  height: 98px;
 }
 
 .timeline-body .timeline-cells-cell {
